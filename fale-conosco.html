@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head> <!--area comportamental do site-->
+<meta charset="UTF-8"/>
+<title>Tudo Sobre Google Glass</title>
+<link rel="stylesheet" type="text/css" href="_css/estilo.css" /> <!--(stylesheet) quer dizer folha de estilo (href (hypertext reference)) configura o arquivo a ser carregado-->
+<link rel="stylesheet" href="_css/form.css"/>
+<script language="javascript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            tot = qtd * 1500;
+            document.getElementById('cTot').value = tot;
+        }
+    </script>
+</head>
+<body>
+<div id="interface">
+<header id="cabecalho"> <!--cabeçalho-->
+    <hgroup> <!--quando tiver um titule e sub titula, pode usar um grupo-->
+    <h1>Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+
+<img id="icone" src="_imagens/contato.png">
+<nav id="menu"><!--tag para navegação-->
+<h1>Menu Principal</h1>
+    <!--<ol>tag para lista ordenada, pode ser usados parametros type="1";para começar do inicio ou o parametro start="3"; para começar de onde quiser(o 3 foi só exemplo, lembrando que só pode ser usado números)
+        <li>Home</li>
+        <li>Especificações</li>
+        <li>Fotos</li>
+        <li>Multimídia</li>
+        <li>Fale conosco</li>
+        </ol>-->
+<ul type="disc">
+        <!--<ul>tag para lista não ordenadas, pode ser usado o parametro type="square";"circle";"disc"-->
+        <!--LEMBRANDO QUE PODE SER INSERIDO UMA LISTA DENTRO DE OUTRA LISTA; TANTO ORDENADA COMO NÃO ORDENADA-->
+    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+</ul>
+</nav>    
+</header>
+    <section id="corpo-full">
+        <article id="noticia-principal">
+            <header id="cabecalho-artigo">
+                <hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>por Gustavo Guanabara</h2>
+                    <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                </hgroup>
+            </header>
+
+            <form method="post" id="fContato" action="mailto:speeduou@outlook.com" oninput="calc_total();"> <!--o parâmetro (method) tem a classe (post) que eh mais lenta porem mais segura ou (get) mais rápida e menos segura; e o (action) e para onde os dados serão enviados-->
+            <!--para que o email seja enviado para qualquer email tem que usar a linguagem (php) junto ao servidor; ou então o cliente de email configurado na maquina ex: no windows -  outlook; no mac o mail -->
+            <!--(oninput); usado para função JavaScript lançada em um documento especial ou no mesmo documento, nesse caso está lá em cima dentro de (head)-->
+
+                <fieldset id="usuario"><legend>Identificação do Usuário</legend><!--deixa o título na parte de cima da borda-->
+                    <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p><!--(input) usado para criar a área de digitação do usuário entre outras funções;com o parâmetro (type) para tipo; (name) para indentificar o nome; (id) para editar no css; (size) para tamanho máximo da caixa; (maxlength) para delimitar a quantidade de caracteres; (placeholder para dar dica ao usuário do que escrever)-->
+                    <p><label for="cSenha">Senha:</label><input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 Dígitos"/></p>
+                    <p>E-mail:<input type="email" name="tMail" id="cMail" size="20" maxlength="40"/></p>
+                    <fieldset id="sexo"><legend>Sexo:</legend>
+
+                    <!--após o (id) o (chacked) serve para deixar marcada a opção-->
+                        <input type="radio" name="tSexo" id="cMasc" chacked/><label for="cMasc">Masculino</label><br /> <!--dentro de um mesmo grupo de obijetos de radio temos que usar o mesmo name para as opções ex: tSexo no masculino e no feminino-->
+                        <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label><!--para clicar no nome e marcar a opção, eh só usar o recurso do (id) junto com o (label ou etiquetas); são usadas para referenciar os objetos aos seus ids, não tem só essa últilidade que eh a prática, mas tem existe uma função semântica que eh para indentificar o objeto relativo a ele, por ex: nomes, senhas e emails, o ideal eh que ultilize também (label) por questões semânticas.Fica melhor para reconhecimento dos provedores.-->
+                    </fieldset>
+                    <p>Data de Nascimento:<input type="date" name="tNasc" id="cNasc"/></p>
+                </fieldset><!--conjunto de campos ou objetos; cria uma borda-->
+
+                <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+                    <p><label for="cRua"> Logradouro:</label><input type="text" name="tRua" id="cRua" size="20" maxlength="30" placeholder="Rua, Av, Trav..." /></p>
+                    <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="99999"/></p><!--para (number) posso ter dois parâmetros; (min),(max)-->
+                    <p><label for="cEst">Estado:</label><select name="tEst" id="cEst">
+                            <!--essa tag (select) eh usada para opções de Estados-->
+                            <optgroup label="Região Sudeste">
+                                <option value="SP" selected>São Paulo</option><!--se quser que apareça as siglas eh só usar a tag (value)-->
+                                <option>Rio de Janeiro</option>
+                                <option>Minas Gerais</option>
+                            </optgroup>
+
+                            <optgroup label="Região Sul">
+                                <!--criando (optgroup) que eh caixa de grupo para facilitar a navegação-->
+                                <option>Paraná</option>
+                                <option>Santa Catarina</option>
+                                <option>Rio Grande do Sul</option>
+                            </optgroup>
+
+                        </select></p>
+                    <p><label for="cCid">Cidade:</label><input type="text" name="tCid" id="cCid" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades"/></p><!--colocando o parâmetro (list) com o (id) da list ele vai auto completar na hora que estiver sendo digitado o nome da Cidade-->
+                    <datalist id="cidades">
+                        <option value="Rio de Janeiro"></option>
+                        <option value="Nova Iguaçu"></option>
+                        <option value="Niteroi"></option>
+                        <option value="Belford Roxo"></option>
+
+                    </datalist>
+                </fieldset>
+
+                <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                    <p><label for="cUrg">Grau de Urgência:&nbsp;</label>
+                    Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Máx</p> <!--a tag (input) serve para colocar uma barra de medidas; usando também o (min) e o (max); e para espaçar com tamanhos maiores usa-se (step)com valores numéricos-->
+                    <p><label for="cMsg">Mensagem:</label> 
+                    <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua menssagem"></textarea></p> <!--o (textarea) são objetos que tem caixas de textos maiores-->
+                <!--as tags (cols e rows) colunas e linhas, diferentes das (size e heigth) elas apresentam barras de rolagens e permitem continuar escrevendo-->
+                </fieldset>
+
+                <fieldset id="pedido"><legend>Quero um Google Glass</legend>
+                    <p><input type="checkbox" name="tPed" id="cPed" checked/><!--(checkbox) eh aquelacixa de marcação ao lado da opção, para ela ja ficar marcada usar (checked)-->
+                    <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                    <p><label for="cCor">Cor:</label>
+                        <input type="color" name="tCor" id="cCor" value="#0000ff" /></p> <!--o objeto (color) -->
+                    <p><label for="cQtd">Quantidade:</label>
+                    <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"/></p>
+                    <p><label for="cTot">Preço Total: R$</label>
+                    <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly/></p><!--objeto (readonly) usado para bloquear a caixa de texto impedindo digitação-->
+                </fieldset>
+
+                <!--<input type="submit" value="Enviar"/>
+				opção para botão padrão-->          
+                <input type="image" name="tEnviar" src="_imagens/botao-enviar.png" /><!--para botão personalizado-->
+
+            </form>
+        </article>
+    </section>
+
+<footer id="rodape"> <!--rodapé-->
+<p>Copyright 2013 - by Gustavo Guanabara<br />
+<a href="http:/facebook" target="_blank">Facebook</a> | 
+<a href="twitter.com" target="_blank">Twitter</a></p>
+</footer>
+</div>
+</body>
+</html>

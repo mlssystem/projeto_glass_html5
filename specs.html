@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<!--area comportamental do site-->
+<!http-equiv="content-type" content="text/html;>
+<meta charset="UTF-8" />
+<title>Tudo Sobre Google Glass</title>
+<link rel="stylesheet" type="text/css" href="_css/estilo.css" /> <!--(stylesheet) quer dizer folha de estilo (href (hypertext reference)) configura o arquivo a ser carregado-->
+    <link rel="stylesheet" href="_css/specs.css"/>
+</head>
+<body>
+<script src="_javascript/funcoes.js"></script>
+<div id="interface">
+<header id="cabecalho">
+<!--cabeçalho-->
+    <hgroup>
+    <!--quando tiver um titule e sub titula, pode usar um grupo-->
+    <h1>Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+
+<img id="icone" src="_imagens/especificacoes.png">
+<nav id="menu">
+<!--tag para navegação-->
+<h1>Menu Principal</h1>
+    <!--<ol>tag para lista ordenada, pode ser usados parametros type="1";para começar do inicio ou o parametro start="3"; para começar de onde quiser(o 3 foi só exemplo, lembrando que só pode ser usado números)
+        <li>Home</li>
+        <li>Especificações</li>
+        <li>Fotos</li>
+        <li>Multimídia</li>
+        <li>Fale conosco</li>
+        </ol>-->
+<ul type="disc">
+        <!--<ul>tag para lista não ordenadas, pode ser usado o parametro type="square";"circle";"disc"-->
+        <!--LEMBRANDO QUE PODE SER INSERIDO UMA LISTA DENTRO DE OUTRA LISTA; TANTO ORDENADA COMO NÃO ORDENADA-->
+    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
+    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+</ul>
+</nav>
+</header>
+    <section id="corpo-full">
+        <article id"noticia-principal">
+            <header id="cabecalho-artigo">
+                <hgroup>
+                    <h3>Glass > Especificações</h3>
+                    <h1>Raio-X no Google Glass</h1>
+                    <h2>por Gustavo Guanabara</h2>
+                    <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                </hgroup>
+            </header>
+
+            <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+
+            <section id="conteudo">
+                <img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa"/> <!--parâmetro usemap diz que eh para usar o mapa do próprio documento e o meu mapa eh o mapa que está logo abaixo-->
+                <map name="meumapa"><!--parêmetro name eh usado para criar uma relação entre o mapa e a imagem-->
+                <area shape="poly" coords="184,219,267,207,266,242,184,257" href="google-glass.html#tela" target="janela"/><!--todo mapa eh composto de area, que tem o seu shape definido(rect; circle; poly) com cordenadas, depois usar o parâmetro href-para abrir o documento seguido de #com o nome do id; e por último o target-local em que o arquivo será aberto; estrá na tag iframe (name)-->
+                <area shape="circle" coords="158,243,12" href="google-glass.html#camera" target="janela"/> <!--tamanho da circunferência do (circle) e áre em px de ráio(metade do valor da circunferência)-->
+                <area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" target="janela"/>
+                <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" target="janela"/><!--pegar as 4 cordenadas do poligono-->
+
+                </map><!--dentro do mapa tem áreas; dentro das áreas tem que informar qual o formato ou (shape); quais as cordenadas desse shape; qual arquivo vai ser aberto, e qual o alvo -->
+                <iframe src="google-glass.html" name="janela" id="frame-spec" scrolling="no"> </iframe>
+            </section>            
+        </article>
+    </section>
+
+<footer id="rodape"><!--rodapé-->
+<p>Copyright 2013 - by Gustavo Guanabara<br />
+<a href="http:/facebook" target="_blank">Facebook</a> |
+<a href="twitter.com" target="_blank">Twitter</a>
+</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head> <!--area comportamental do site-->
+<!http-equiv="content-type" content="text/html;>
+<meta charset="UTF-8"/>
+<title>Tudo Sobre Google Glass</title>
+<link rel="stylesheet" type="text/css" href="_css/estilo.css" /> <!--(stylesheet) quer dizer folha de estilo (href (hypertext reference)) configura o arquivo a ser carregado-->
+<link rel="stylesheet" href="_css/media.css" />
+</head>
+<body>
+<script src="_javascript/funcoes.js"></script>
+<div id="interface">
+<header id="cabecalho"> <!--cabeçalho-->
+    <hgroup> <!--quando tiver um titule e sub titula, pode usar um grupo-->
+    <h1>Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+
+<img id="icone" src="_imagens/multimidia.png">
+<nav id="menu"><!--tag para navegação-->
+<h1>Menu Principal</h1>
+    <!--<ol>tag para lista ordenada, pode ser usados parametros type="1";para começar do inicio ou o parametro start="3"; para começar de onde quiser(o 3 foi só exemplo, lembrando que só pode ser usado números)
+        <li>Home</li>
+        <li>Especificações</li>
+        <li>Fotos</li>
+        <li>Multimídia</li>
+        <li>Fale conosco</li>
+        </ol>-->
+<ul type="disc">
+        <!--<ul>tag para lista não ordenadas, pode ser usado o parametro type="square";"circle";"disc"-->
+        <!--LEMBRANDO QUE PODE SER INSERIDO UMA LISTA DENTRO DE OUTRA LISTA; TANTO ORDENADA COMO NÃO ORDENADA-->
+    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="index.html">Home</a></li>
+    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+</ul>
+</nav>    
+</header>
+
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Glass > Multimídia</h3>
+                <h1>Sons e Vídeos</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>        
+        <div id="tv-radio">
+            <audio id="musica" controls="controls" autoplay> <!--tem que usar o controls para que aparecça o icone do áudio-->
+            <!--cada navegador escolhe o formato de áudio que quer abrir, portanto colocar os formatos mpe; ogg; aac-->
+                <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/> 
+                <!--<source src="_media/2009-lovers-carvings-bibio.m4a" type="audio/x-aac"/>
+                <source src="_media/2009-lovers-carvings-bibio.ogg" type="audio/ogg"/>-->
+            Desculpe, mas não foi possível carregar o Áudio.
+            </audio>
+            <video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">
+                <source src="_media/getting-started.mp4" type="video/mp4" />
+                <!--<source src="_media/getting-started.webm" type="video/webm" />
+                <source src="_media/getting-started.ogv" type="video/ogg" />-->
+                Desculpe, mas não foi possível carregar o Áudio.       
+            </video><!--antes era usado um arquivo para cada navagador isso em 2013; já em 2016, já estão compátiveis com o formato mp4-->  
+        </div>        
+
+        <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/90uPbUirZ3I?list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>--><!--link de um vídeo do youtube-->
+
+    </article>
+</section>
+
+<footer id="rodape"> <!--rodapé-->
+<p>Copyright 2013 - by Gustavo Guanabara<br />
+<a href="http:/facebook"target="_blank">Facebook</a> | 
+<a href="twitter.com"target="_blank">Twitter</a></p>
+</footer>
+</div>
+</body>
+</html>

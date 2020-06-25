@@ -1,0 +1,258 @@
+﻿@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@font-face { /*usado para colocar fontes específicas*/
+    font-family: 'FonteLogo'; /*nomeando o parametro*/
+    src: url("../_fonts/bubblegum-sans-regular.otf"); /*indicando o caminho para busca da fonte*/
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+}
+
+div#interface {
+    width: 1200px; /*largura de todo conteudo site; lembrando que o menu está em posição absoluta*/ 
+    background-color: #ffffff;
+    margin: -20px auto 10px auto; /*margem externa do site; posições: cima, direita, baixo, esquerda*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);/*cria sombra no objeto; deslocamento lateral, vetical, espalhamento, e cor*/
+    padding: 10px 10px 10px 10px; /*margem interna do site; mesmo esquema do margin, lembrando que se quiser todos os espaços iguais, basta colocar apenas um valor, por ex: 10px, pode ser feito tambem configurações individuais, padding-top, right, botton, left*/    
+}
+
+p{
+    text-align:justify;
+    text-indent:50px;
+}
+
+a { 
+    color: #606060;
+    text-decoration: none; /*configurando links para não aparecer o sublinhado */  
+}
+
+a#link-espec {
+    padding: 50px;
+    width: 1000px;
+}
+
+a:hover {
+    text-decoration: underline; /*configurando links para aparecer o sublinhado quando passar o mouse*/
+}
+header#cabecalho img#icone {
+    position: absolute;
+    left: 1100px;
+    top: 80px;
+
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid; /*linha, tamanho,cor, estilo*/
+    height: 150px; /*espaço da linha*/
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /*o background com a url (que indica o caminho), eh para deixar a logo como plano de fundo e não como imagem, esse parametro com os (../) eh para voltar uma pasta, ou seja, ir para o local onde está a pasta de imagens, ou seja, para chama-la, pois estamos dentro da pasta do css*/
+    padding: 0px;
+}
+
+header#cabecalho h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    margin-top: 0px;
+}
+/*Formatação de imagens com legendas*/
+/*Figure eh o objeto contener e ficara em uma posicao relativa, ou seja, no lugar em que código html foi colocado; e o figcaption ficara dentro dele em posição absoluta na posição zero*/
+
+figure.foto-legenda{ /*quando tiver o parametro (class) será usado a tag, um ponto (.) e o nome da classe*/
+    position: relative; /*como figure eh um objeto container deixando como posição relativa ele vai obedecer o olcar em que foi colocado o código*/
+    border: 8px solid white; /*largura tipo cor*/
+    box-shadow: 1px 1px 4px black; /*criando sombra na borda; deslocamento horizontal vertical e espalhamento*/
+}
+
+figure.foto-legenda img{ /*deixando a imagem do tamnho da borda*/
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption{ /*criando estilo para legenda*/
+    opacity: 0; /*a legenda não aparece mas será criando um efeito houver, para aparecer quando passar o mouse*/
+    position: absolute; /*como figcaption eh filho do figure; tendo posição absoluta ficará na posição zero ou seja em cima*/
+    top: 0px; /*a legenda vai ficar em cima*/
+    background-color: rgba(0,0,0,.4);
+    color: white;
+    width: 100%; /*largura do fundo*/
+    height: 100%; /*altura do fundo*/
+    padding: 10px; /*criando um espaço ou margem*/
+    box-sizing: border-box; /*criando um box dentro da borda*/
+    transition: opacity 1s; /*tempo determinado para mostrar a legenda*/
+}
+
+figure.foto-legenda:hover figcaption{
+    opacity:1; /*efeito criado para aparecer quando passar o mouse por cima, e 1 significa 100% na opacidade*/
+}
+/*Formatação do menu*/
+/*quando tiver um parametro (id) será representado por um hashtag (#)*/
+
+nav#menu {
+    display: block; /*para que o menu flutue sobre a tela*/
+}
+
+nav#menu ul {
+    list-style: none; /*sem estilo*/
+    text-transform: uppercase; /*deixar as letras em maiúsculas*/
+    position: absolute; /*para que o item selecionado (no caso a lista) saia do container*/
+    top: -20px;
+    left: 500px;
+}
+
+nav#menu li {
+    display: inline-block; /*deixa o menu em linha*/
+    background-color: #dddddd; /*cor do botão*/
+    padding: 10px; /*tamanho do botão*/
+    margin: 2px; /*espaço entre os botões*/
+    transition: background-color 1s; /*transition ainda não foi oficializado em todos os navegadores, mas serve para dar um efeito visual na troca de cor dos botões*/
+}
+
+nav#menu li:hover { /*esse parametro eh usado para mudar a cor do botão quando passar o mouse*/
+    background-color: #606060; 
+}
+
+nav#menu h1 {
+    display: none; /*usado para esconder o Menu Inicial*/
+}
+
+nav#menu a { /*todo link que tem uma ancora terá*/
+    color: #000000; /*cor preta*/
+    text-decoration: none; /*e não será sublinhado*/
+}
+
+nav#menu a:hover{ /*usado para mudar a cor do link quando o mouse estiver em cima*/
+    color: #ffffff; /*cor branca*/
+    text-decoration: underline; /*usado caso queira sublinhar o link quando o mouse passar por cima*/
+}
+
+section#corpo {
+    display: block; /*criando um bloco do conteudo*/
+    width: 680px; /*largura*/
+    float: left; /*para o corpo flutuar*/
+    border-right: 1px solid #606060; /*linha*/
+    padding: 15px; /*espaço*/
+}
+
+article#noticia-principal h2 {
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+}
+
+.direita { /*foi criado essa class para configurar individualmente o h3 específico*/
+    text-align: right;
+    font-size: 13pt
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+
+}
+
+table#tabelaspec { /*colocando borda na tabela*/
+    border: 1px solid #606060;    
+}
+
+table#tabelaspec {
+    border-spacing: 0px; /*usado para tirar os espaços entre as bordas dos dados*/
+    margin-left: auto; /*usando o margin tanto para o left quanto para o right ele ficará cdntralizado*/
+    margin-right: auto;
+}
+
+table#tabelaspec td { /*colocando borda nos dados */
+    border: 1px solid #606060;
+    padding: 10px; /*criando um espaço interno das células*/
+    text-align: center;
+    vertical-align: middle; /*podendo ser top(em cima), bottom(em baixo), middle(centro)*/
+}
+
+table#tabelaspec td.ce { /*configurando a coluna da esquerda*/
+    color: #ffffff;
+    background-color: #606060;
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec td.cd { /*configurando a coluna da direita*/
+    background-color: #cecece;
+    text-align: left;
+}
+
+table#tabelaspec caption { /*configurando o títula da tabela*/
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span { /*configurando uma parte do título*/
+    display: block; /*mostrar como bloco flutuante*/
+    float: right; /*fazendo flutuar a direita*/
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#lateral {
+    display: block; /*criando um bloco do conteudo*/
+    width: 460px; /*largura*/
+    float: right; /*para o corpo flutuar*/
+    background-color:#dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+aside#lateral h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin: 0px;
+
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+footer#rodape {
+    clear: both; /*função que limpa a configuração dos dois lados*/
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <title>Teste JavaScript</title>
+    <meta charset="utf-8" />
+    <!--java diferencia letras maiusculas e minuscula, portanto, usar uma minuscula e outra maiuscula, todas as palavras juntas-->
+    <!--no Java tudo que estiver entre parêntese eh PARÂMETROS; entre colchetes CÓDIGOS-->
+    <!--parânmetros são valores que podem ser passado do código principal para o uma determinda função; para reagir de uma maneira diferente de acordo com os valores que foram passados; por exemplo na img abaixo; vai passando de um estado para o outro-->
+    <!--tudo que tiver entre abre cheves e fecha chaves eh chamado de blocos-->
+    <script>
+        var quebrada = false; /*variável quebrada não está quebrada servirá para base para uma máquina de estado que eh um conceito tecnico um pouco mais avançado; essa variável indentifica se a lâmpada está quebrada ou não, fazendo que após quebrada não faça mais nenhuma atividade dentro da função muda lâmpada. se for definada fora da função será uma variável global; significa que funcionára durante todo o programa*/
+        function mudaLampada(tipo) { /*colocando o tipo como parâmetro dentro da função*/
+            if (tipo == 1) { /*o simbolo de = eh de atribuição, para = colocar 2 vezes*/
+                arquivo = "_imagens/lampada-acesa.jpg";
+            }
+            if (tipo == 2) {
+                arquivo = "_imagens/lampada-apagada.jpg";
+            }
+            if (tipo == 3) {
+                arquivo = "_imagens/lampada-quebrada.jpg";                
+            }
+            if (!quebrada) {
+                document.getElementById("Luz").src = arquivo;
+                if (tipo == 3) {
+                    quebrada = true; /*só vai quebrar quando a variável for tipo 3*/
+                    quebrada = true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Acenda a Lâmpada</h1>
+    <img src="_imagens/Lampada-apagada.jpg" id="Luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)" /> <!--comando onclick usado para aparecer o alerta do java quando clicar na imagem; e onmousemove-  quando passar o mouse por cima-->
+</body>
+</html>

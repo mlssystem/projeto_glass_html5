@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head> <!--area comportamental do site-->
+<!http-equiv="content-type" content="text/html;>
+<meta charset="UTF-8"/>
+<title>Tudo Sobre Google Glass</title>
+<link rel="stylesheet" type="text/css" href="_css/estilo.css" /> <!--(stylesheet) quer dizer folha de estilo (href (hypertext reference)) configura o arquivo a ser carregado-->
+<link rel="stylesheet" href="_css/fotos.css"/>
+</head>
+<body>
+<script src="_javascript/funcoes.js"></script>
+<div id="interface">
+<header id="cabecalho"> <!--cabeçalho-->
+    <hgroup> <!--quando tiver um titule e sub titula, pode usar um grupo-->
+    <h1>Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+
+<img id="icone" src="_imagens/fotos.png">
+<nav id="menu"><!--tag para navegação-->
+<h1>Menu Principal</h1>
+    <!--<ol>tag para lista ordenada, pode ser usados parametros type="1";para começar do inicio ou o parametro start="3"; para começar de onde quiser(o 3 foi só exemplo, lembrando que só pode ser usado números)
+        <li>Home</li>
+        <li>Especificações</li>
+        <li>Fotos</li>
+        <li>Multimídia</li>
+        <li>Fale conosco</li>
+        </ol>-->
+<ul type="disc">
+        <!--<ul>tag para lista não ordenadas, pode ser usado o parametro type="square";"circle";"disc"-->
+        <!--LEMBRANDO QUE PODE SER INSERIDO UMA LISTA DENTRO DE OUTRA LISTA; TANTO ORDENADA COMO NÃO ORDENADA-->
+    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="index.html">Home</a></li>
+    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="specs.html">Especificações</a></li>
+    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="fotos.html">Fotos</a></li>
+    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="multimidia.html">Multimídia</a></li>
+    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+</ul>
+</nav>    
+</header>
+    <section id="corpo-full">
+        <article id="noticia-principal">
+            <header id="cabecalho-artigo">
+                <hgroup>
+                    <h3>Glass > Fotos</h3>
+                    <h1>Galeria de Imagens do Google Glass</h1>
+                    <h2>por Gustavo Guanabara</h2>
+                    <h3>Atualizado em 01/Maio/2013</h3>
+                </hgroup>
+            </header>
+
+ <p>Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.</p>
+            
+<ul id="album-fotos">
+    <li id="foto01"><span>Agenda e lembretes</span></li>
+    <li id="foto02"><span>Sergey Brin usando o Glass</span></li>
+    <li id="foto03"><span>Leve e compacto</span></li>
+    <li id="foto04"><span>Sensação de uma tela de 50"</span></li>
+    <li id="foto05"><span>Vários tipos de lente</span></li>
+    <li id="foto06"><span>Informações importantes</span></li>
+</ul>
+ 
+        </article>
+    </section>
+<footer id="rodape"> <!--rodapé-->
+<p>Copyright 2013 - by Gustavo Guanabara<br />
+<a href="http:/facebook"target="_blank">Facebook</a> | 
+<a href="twitter.com"target="_blank">Twitter</a></p>
+</footer>
+</div>
+</body>
+</html> 

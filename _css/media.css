@@ -1,0 +1,33 @@
+﻿@charset "UTF-8";
+
+div#tv-radio {
+    width: 900px;
+    height: 580px;
+    margin: auto;
+    background: url("../_imagens/radio-tv.png") no-repeat; /*mesmo que aja algum problema só uma tv será aberta*/
+} 
+
+audio#musica {
+    display: block; /*para ser exibido em bloco*/
+    position: relative;
+    left: 575px;
+    top: 500px;
+    width: 300px;
+}
+
+video#filme {
+    display: block;
+    position: relative;
+    left: 90px;
+    top: 90px;
+    width: 440px;    
+}
+
+/*iframe {
+    display: block;
+    position: relative;
+    left: 300px;
+    top: -10px;
+    width: 400px;
+    height: 180px;
+}*/ /*configuração para o video do youtube*/

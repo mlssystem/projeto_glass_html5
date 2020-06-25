@@ -1,0 +1,21 @@
+﻿@charset "UTF-8";
+
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+}
+
+iframe#frame-spec {
+    width: 410px;
+    height: 290px;
+    border: none; 
+    /*overflow:hidden; usado para esconder a barra de rolagem*/
+}
+
+iframe#frame-spec::-webkit-scrollbar {
+    display: none;
+}
+
+        map area {
+            outline: none;
+        }
