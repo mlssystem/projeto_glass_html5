@@ -12,13 +12,13 @@
         var quebrada = false; /*variável quebrada não está quebrada servirá para base para uma máquina de estado que eh um conceito tecnico um pouco mais avançado; essa variável indentifica se a lâmpada está quebrada ou não, fazendo que após quebrada não faça mais nenhuma atividade dentro da função muda lâmpada. se for definada fora da função será uma variável global; significa que funcionára durante todo o programa*/
         function mudaLampada(tipo) { /*colocando o tipo como parâmetro dentro da função*/
             if (tipo == 1) { /*o simbolo de = eh de atribuição, para = colocar 2 vezes*/
-                arquivo = "_imagens/lampada-acesa.jpg";
+                arquivo = "imagens/lampada-acesa.jpg";
             }
             if (tipo == 2) {
-                arquivo = "_imagens/lampada-apagada.jpg";
+                arquivo = "imagens/lampada-apagada.jpg";
             }
             if (tipo == 3) {
-                arquivo = "_imagens/lampada-quebrada.jpg";                
+                arquivo = "imagens/lampada-quebrada.jpg";                
             }
             if (!quebrada) {
                 document.getElementById("Luz").src = arquivo;
@@ -32,6 +32,6 @@
 </head>
 <body>
     <h1>Acenda a Lâmpada</h1>
-    <img src="_imagens/Lampada-apagada.jpg" id="Luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)" /> <!--comando onclick usado para aparecer o alerta do java quando clicar na imagem; e onmousemove-  quando passar o mouse por cima-->
+    <img src="imagens/Lampada-apagada.jpg" id="Luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)" /> <!--comando onclick usado para aparecer o alerta do java quando clicar na imagem; e onmousemove-  quando passar o mouse por cima-->
 </body>
 </html>
