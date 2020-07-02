@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 @font-face { /*usado para colocar fontes específicas*/
     font-family: 'FonteLogo'; /*nomeando o parametro*/
-    src: url("../_fonts/bubblegum-sans-regular.otf"); /*indicando o caminho para busca da fonte*/
+    src: url("../fonts/bubblegum-sans-regular.otf"); /*indicando o caminho para busca da fonte*/
 }
 body{
     font-family: Arial, sans-serif;
@@ -46,7 +46,7 @@ header#cabecalho img#icone {
 header#cabecalho {
     border-bottom: 1px #606060 solid; /*linha, tamanho,cor, estilo*/
     height: 150px; /*espaço da linha*/
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /*o background com a url (que indica o caminho), eh para deixar a logo como plano de fundo e não como imagem, esse parametro com os (../) eh para voltar uma pasta, ou seja, ir para o local onde está a pasta de imagens, ou seja, para chama-la, pois estamos dentro da pasta do css*/
+    background: url("../imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /*o background com a url (que indica o caminho), eh para deixar a logo como plano de fundo e não como imagem, esse parametro com os (../) eh para voltar uma pasta, ou seja, ir para o local onde está a pasta de imagens, ou seja, para chama-la, pois estamos dentro da pasta do css*/
     padding: 0px;
 }
 

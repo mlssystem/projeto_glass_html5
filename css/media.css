@@ -4,7 +4,7 @@ div#tv-radio {
     width: 900px;
     height: 580px;
     margin: auto;
-    background: url("../_imagens/radio-tv.png") no-repeat; /*mesmo que aja algum problema só uma tv será aberta*/
+    background: url("../imagens/radio-tv.png") no-repeat; /*mesmo que aja algum problema só uma tv será aberta*/
 } 
 
 audio#musica {
