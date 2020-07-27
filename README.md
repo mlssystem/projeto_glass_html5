@@ -19,4 +19,4 @@ Eternamente grato.
   
 ## Licença
 
-Licenciado sob a licença [MIT](LICENSE.txt).
+Licenciado sob a licença [MIT](https://github.com/mlssystem/projeto_glass_html5/blob/master/LICENSE).
